@@ -1,8 +1,4 @@
-/*
- * http://www.mycodes.net
- */
 
-// variables
 var $win = $(window);
 var clientWidth = $win.width();
 var clientHeight = $win.height();
