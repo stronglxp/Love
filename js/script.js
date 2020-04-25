@@ -50,7 +50,7 @@
       Text
     ********************/
     
-    var fontSize = '64px Arial';
+    var fontSize = '40px Arial';
     
     if (X < 768) {
       fontSize = '24px Arial';
@@ -62,7 +62,7 @@
       ctx.textBaseline = 'middle';
       ctx.font = fontSize;
       ctx.textAlign = 'center';
-      ctx.fillText("三周年快乐", X/8 ,Y/8);
+      ctx.fillText("三周年快乐", X/7 ,Y/8);
     }
 
     /********************
@@ -254,8 +254,12 @@
       Y = canvas.height = window.innerHeight;
       if (X < 768) {
         fontSize = '24px Arial';
+      } else if (X >= 768 && X < 970){
+        fontSize = '35px Arial';
+      } else if (X >= 970 && X < 1170) {
+        fontSize = '45px Arial';
       } else {
-        fontSize = '64px Arial';
+        fontSize = '55px Arial';
       }
     }
 
