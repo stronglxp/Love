@@ -13,7 +13,7 @@ var tv = {
 	O : [],
 	screen : {},
 	grid : {
-		size       : 4,  // 4x4 grid
+		size       : 6,  // 4x4 grid
 		borderSize : 6,  // borders size
 		zoomed     : false
 	},
@@ -40,11 +40,14 @@ var tv = {
 		var n = (tv.grid.size / 2) - .5;
 		for (var y = -n; y <= n; y++)
 		{
-			for (var x = -n; x <= n; x++)
+			for (var x = -n; x <= n + 2; x++)
 			{
 				/* ==== create HTML image element ==== */
 				var o = document.createElement('img');
 				var i = img[(ni++) % img.length];
+				if (ni > img.length) {
+					break;
+				}
 				o.className = 'tvout';
 				o.src = i.src;
 				tv.screen.obj.appendChild(o);
